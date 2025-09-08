@@ -11,7 +11,6 @@ import path from 'node:path';
 
 import { ReviewPage } from './pages/review';
 
-
 export type UserContext = {
   context: BrowserContext;
   page: Page;

@@ -26,7 +26,7 @@ const eslintConfig = [
           alphabetize: { order: 'asc', caseInsensitive: true },
         },
       ],
-      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     },
     ignores: ['**/components/ui/**'],
   },

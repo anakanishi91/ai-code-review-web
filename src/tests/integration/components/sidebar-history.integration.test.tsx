@@ -97,7 +97,7 @@ describe('SidebarHistory - integration', () => {
       isLoading: false,
       mutate: jest.fn(),
       size: 0,
-      error: undefined
+      error: undefined,
     });
 
     (nextNavigation.useRouter as jest.Mock).mockReturnValue({ push: jest.fn() });
@@ -117,7 +117,9 @@ describe('SidebarHistory - integration', () => {
   function renderWithProviders() {
     return render(
       <SidebarProvider>
-        <SidebarHistory user={{ email: 'alice@example.com', type: 'regular', accessToken: 'accessToken' }} />
+        <SidebarHistory
+          user={{ email: 'alice@example.com', type: 'regular', accessToken: 'accessToken' }}
+        />
       </SidebarProvider>,
     );
   }
@@ -169,7 +171,7 @@ describe('SidebarHistory - integration', () => {
       isLoading: false,
       mutate: jest.fn(),
       size: 0,
-      error: undefined
+      error: undefined,
     });
 
     renderWithProviders();
@@ -187,7 +189,7 @@ describe('SidebarHistory - integration', () => {
       isLoading: true,
       mutate: jest.fn(),
       size: 0,
-      error: undefined
+      error: undefined,
     });
 
     renderWithProviders();

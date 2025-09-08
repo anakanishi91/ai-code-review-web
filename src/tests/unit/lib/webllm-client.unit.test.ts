@@ -88,9 +88,11 @@ describe('WebLLMApi', () => {
     const onUpdate = jest.fn();
 
     mockEngine.reload.mockResolvedValueOnce(undefined);
-    mockEngine.setInitProgressCallback.mockImplementation((callback: (progress: { text: string }) => void) => {
-      callback({ text: 'Initializing...' });
-    });
+    mockEngine.setInitProgressCallback.mockImplementation(
+      (callback: (progress: { text: string }) => void) => {
+        callback({ text: 'Initializing...' });
+      },
+    );
     mockEngine.chatCompletion.mockImplementation(async function* () {});
 
     await api.chat('Hi', 'gpt-test' as ChatModelId, onUpdate);

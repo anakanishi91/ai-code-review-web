@@ -15,7 +15,7 @@ jest.mock('@/components/toast', () => ({
 }));
 
 // eslint-disable-next-line react/display-name
-jest.mock('react-markdown', () => (props: React.ComponentProps<"div">) => {
+jest.mock('react-markdown', () => (props: React.ComponentProps<'div'>) => {
   return <div data-testid="mock-markdown">{props.children}</div>;
 });
 

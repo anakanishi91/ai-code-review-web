@@ -8,8 +8,6 @@ import { SidebarUserNav } from '@/components/sidebar-user-nav';
 import * as toastModule from '@/components/toast';
 import { SidebarProvider } from '@/components/ui/sidebar';
 
-
-
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn(),
   useParams: jest.fn(),
@@ -46,7 +44,9 @@ function renderWithProviders() {
   return render(
     <ThemeProvider attribute="class">
       <SidebarProvider>
-        <SidebarUserNav user={{ email: 'alice@example.com', type: 'regular', accessToken: 'accessToken' }} />
+        <SidebarUserNav
+          user={{ email: 'alice@example.com', type: 'regular', accessToken: 'accessToken' }}
+        />
       </SidebarProvider>
     </ThemeProvider>,
   );

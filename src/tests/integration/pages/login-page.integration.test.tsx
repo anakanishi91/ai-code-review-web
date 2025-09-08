@@ -50,7 +50,7 @@ describe('<LoginPage /> integration', () => {
   beforeEach(() => {
     (nextNavigation.useRouter as jest.Mock).mockReturnValue({ push, refresh });
     (nextAuth.useSession as jest.Mock).mockReturnValue({ update });
-    
+
     jest.clearAllMocks();
     mockState = { status: 'idle' };
   });
