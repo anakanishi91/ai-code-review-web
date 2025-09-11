@@ -89,7 +89,7 @@ export async function getReviews({
   endingBefore: string | null;
   token: string;
 }): Promise<ReviewsArraySchema> {
-  const url = new URL(`${API_BASE_URL}/reviews`);
+  const url = new URL(`${API_BASE_URL}/reviews/`);
 
   if (limit) url.searchParams.append('limit', limit.toString());
   if (startingAfter) url.searchParams.append('starting_after', startingAfter);
