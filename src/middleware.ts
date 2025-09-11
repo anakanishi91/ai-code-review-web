@@ -18,6 +18,8 @@ export default async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  console.log('AUTH_SECRET:', process.env.AUTH_SECRET);
+
   const token = await getToken({
     req: request,
     secret: process.env.AUTH_SECRET,
