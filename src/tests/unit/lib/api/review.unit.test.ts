@@ -149,7 +149,7 @@ describe('review api', () => {
       });
 
       expect(mockedFetchWithSchema).toHaveBeenCalledWith(
-        'http://localhost:8000/api/v1/reviews?limit=10&starting_after=a&ending_before=b',
+        'http://localhost:8000/api/v1/reviews/?limit=10&starting_after=a&ending_before=b',
         {
           method: 'GET',
           headers: { Authorization: 'Bearer abc' },
