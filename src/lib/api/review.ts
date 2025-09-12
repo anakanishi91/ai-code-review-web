@@ -20,7 +20,7 @@ export async function createReview({
   token: string;
 }): Promise<Review> {
   return await fetchWithSchema(
-    `${API_BASE_URL}/reviews`,
+    `${API_BASE_URL}/reviews/`,
     {
       method: 'POST',
       headers: {

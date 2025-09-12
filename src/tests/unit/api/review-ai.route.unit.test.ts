@@ -44,7 +44,7 @@ describe('POST /review (unit tests)', () => {
     const response = await POST(createRequest(body));
 
     expect(response.status).toBe(200);
-    expect(response.headers.get('Content-Type')).toBe('text/event-stream');
+    expect(response.headers.get('Content-Type')).toBe('text/plain');
     const text = await response.text();
     expect(text).toBe('event-stream-data');
 

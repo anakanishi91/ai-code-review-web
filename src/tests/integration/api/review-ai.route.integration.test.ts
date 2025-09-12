@@ -57,7 +57,7 @@ describe('POST /review (integration with supertest)', () => {
     });
 
     expect(response.status).toBe(200);
-    expect(response.header['content-type']).toContain('text/event-stream');
+    expect(response.header['content-type']).toContain('text/plain');
     expect(response.text).toBe('event-stream-data');
   });
 

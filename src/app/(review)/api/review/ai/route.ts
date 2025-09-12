@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     });
     return new Response(res.body, {
       headers: {
-        'Content-Type': 'text/event-stream',
+        'Content-Type': 'text/plain',
         'Cache-Control': 'no-cache',
         Connection: 'keep-alive',
       },

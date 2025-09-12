@@ -41,7 +41,7 @@ describe('review api', () => {
       });
 
       expect(mockedFetchWithSchema).toHaveBeenCalledWith(
-        'http://localhost:8000/api/v1/reviews',
+        'http://localhost:8000/api/v1/reviews/',
         {
           method: 'POST',
           headers: {

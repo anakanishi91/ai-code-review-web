@@ -9,7 +9,7 @@ import { SidebarToggle } from '@/components/sidebar-toggle';
 import { Button } from '@/components/ui/button';
 import { ChatModelId, ProgrammingLanguageType } from '@/lib/constants';
 
-import { PlusIcon, VercelIcon } from './icons';
+import { PlusIcon } from './icons';
 import { ProgrammingLanguageSelector } from './programming-language-selector';
 import { useSidebar } from './ui/sidebar';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
@@ -70,7 +70,6 @@ function PureReviewHeader({
         onClick={sendCode}
         disabled={!isReady}
       >
-        <VercelIcon size={16} />
         Submit Code
       </Button>
     </header>
